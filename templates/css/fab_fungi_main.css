@@ -1,0 +1,229 @@
+body{
+    margin:0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(159,151,131, 0.9), rgba(159,151,131, 0.9)), url(../images/bg_redmushroom.png) no-repeat fixed;
+    background-size: cover;  
+    font-family: 'Noto', serif;
+    color: rgb(70,41,39);   }
+
+.background{font-size: 20px;}
+
+.logo{ margin: .5rem .5rem;
+    @media only screen and (max-width: 992px){
+        width: 50%;
+    }}
+.logo:hover {transform: scale(1.1,1.1);}
+
+.navbar-brand{ display: flex; justify-content: center;}
+
+.pg_title h1{
+    margin:0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
+    font: medium 'Noto', serif;
+    font-size: 3rem;
+    @media only screen and (max-width: 992px){
+        text-align: center; 
+        margin-top: 10px:
+    }}
+/*
+.banner {
+    position: absolute;
+    width: 1200px;
+    height: 196px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    }*/
+
+.navbar{
+    /*background-color:rgba(159,146,131, 0.9);*/
+    background-image: linear-gradient(rgb(159,146,131), rgba(70,41,39, 0.2) );
+}
+.navbar::after{
+    content:"";
+    position: absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    border-bottom: 0.2rem solid rgba(70,41,39, 0.2) }
+
+.navbar-toggler{
+    color:#FCE7E6;}
+
+.navbar-toggler:active{
+    border-color: rgba(var(252,231,230), 0.15);}
+
+.navbar-toggler-icon{
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28252, 231, 230, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+
+.navbar-collapse{margin-top: 8rem;
+    @media only screen and (max-width: 992px) {
+        margin-top: 0.5rem;
+    }}
+
+.nav-pills{
+    @media only screen and (max-width: 992px) {
+        justify-content:center;
+        margin-bottom: 10px;
+    }}
+
+.nav-pills>li>a {
+    color: #462927;
+    background-color: #FCE7E6;
+    font-size: 14px;
+    box-shadow:#917264 2px 2px;
+    @media only screen and (max-width: 992px) {
+        margin-right:0; margin-left: 2rem; font-size: 1rem;
+        background-color:#FCE7E6; }}
+
+.btn:hover, .nav-pills>li>a:hover{
+    background-color: #D17A76;
+    color:#FCE7E6;}
+
+.welcomepg {
+    background-color: rgba(252,231,230, 0.5);
+    box-shadow:#917264 2px 2px;}
+
+.contactlink{
+    margin-top: 50px; 
+    margin-bottom: 50px; }
+
+.contactlink>a {
+    color: #462927;
+    font:  bold 2.5rem Noto, serif;  }
+
+.contactlink :hover{color: #FCE7E6; }
+
+/*footer hr tag style*/
+hr.my-3{
+    border:2px solid #D17A76;
+    box-shadow: #AE6662 1px 1px;
+    opacity: 0.9;
+    margin-right: 50%;
+}
+
+.social>a{ margin: 10px 5px; }
+
+.btn {
+    border-radius: .375rem;
+    background-color: #FCE7E6;
+    color: #462927;
+    font:  1rem Noto serif;
+    box-shadow:#917264 2px 2px;}
+/*Learn More button position on Welcome page*/
+.justify-content-end{
+    @media only screen and (max-width: 992px) {
+        display: flex;
+        justify-content: center!important;}
+}
+
+.contactform{display: block; font-size: 1.5rem; }
+
+input[type=text], input[type=email], textarea {
+    outline-color:#D17A76!important;
+    background-color: #FCE7E6; 
+    border:1px solid #FCE7E6; 
+    border-radius: 10px; 
+    color: #462927;}
+
+input:-webkit-autofill,input:-webkit-autofill:hover, input:autofill:hover, input:-webkit-autofill:focus, input:-autofill:focus {
+    -webkit-text-fill-color:#462927;
+    border:1px solid #FCE7E6; 
+    transition: background-color 5000s ease-in-out 0s;}
+
+.contactimg {border-radius: 50%;
+    border:2px solid #D17A76;
+    box-shadow: #AE6662 1px 1px;
+    @media only screen and (max-width: 768px) {
+        display:none;}
+        @media only screen and (min-width: 1200px) {
+            width:300px;
+            height:400px;}}
+
+#tickbox{font-size: 1rem;}
+
+/*label is wrapped around checkbox in order to customise checkbox*/
+.newslet{
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;}
+
+/*hide browsers default checkbox*/
+.newslet input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;}
+/*create custom checkbox*/
+   .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color:#FCE7E6;
+    border: 1px solid #FCE7E6; border-radius: 5px;}
+
+/* On mouse-over, add a background colour */
+.newslet:hover input ~ .checkmark {
+    background-color:#D17A76;}
+
+/* When the checkbox is checked, add a background colour */
+.newslet input:checked ~ .checkmark {
+    background-color:#AE6662;}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked*/
+.newslet input:checked ~ .checkmark:after {
+    display: inline-block;}
+
+/*Style the checkmark/indicator*/
+.newslet .checkmark:after{
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);}
+
+.aboutimg{
+    @media only screen and (max-width: 576px) {
+        display: flex;
+        justify-content: center!important;
+        }}
+.aboutimg>img, .addimg>img {
+    border:2px solid #D17A76;
+    box-shadow: #AE6662 1px 1px;
+    @media only screen and (max-width: 576px){width: 50%; height: auto;}}
+
+.removeimg{@media only screen and (max-width: 576px) {
+    display:none;}}
+.removeimg>img{border:2px solid #D17A76;
+    box-shadow: #AE6662 1px 1px;}
+
+.addimg{@media only screen and (min-width: 576px) {
+    display:none;}
+    @media only screen and (max-width: 576px) {
+        display:flex;
+        justify-content: center!important;}}
+
+.factimg{text-align:center;}
+.factimg>img{
+    border:2px solid #D17A76;
+    box-shadow: #AE6662 1px 1px;
+    border-radius: 50%;}
+
+.factp{text-align: left;}
+
