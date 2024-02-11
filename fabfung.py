@@ -26,9 +26,9 @@ templates = Jinja2Templates(directory="templates")
 # / This is a decorator that specifies the route. This creates a GET method on the sites route. The result is then returned by the wrapped function.
 
 
-@app.get('/Fungi_Index.html', response_class=HTMLResponse)
+@app.get('/index.html', response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse("Fungi_Index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get('/About.html', response_class=HTMLResponse)
