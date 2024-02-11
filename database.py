@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 #ORM Object Relational Mapper
 
 # localhost
-DATABASE_URL = "postgresql://louisemullane:DataBa5e!@localhost:5432/mydb"
+# DATABASE_URL = "postgresql://louisemullane:DataBa5e!@localhost:5432/mydb"
 
 # mydb.cz28s8woidtp.eu-north-1.rds.amazonaws.com
 DATABASE_URL = "postgresql://louisemullane:DataBa5e!@mydb.cz28s8woidtp.eu-north-1.rds.amazonaws.com:5432/mydb"
