@@ -1,4 +1,9 @@
 # fabulous_fungi
 
 ## HowTo ...
-![name](https://github.com/mullanelou/fabulous_fungi/blob/master/media/test.mov)
+
+### cd to home dir
+1. cd fabulous_fungi
+
+### build the app in docker
+2. sh build.sh
