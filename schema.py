@@ -10,7 +10,6 @@ class ContactUs(BaseModel):
     lastname: str
     email: str
     message: str
-    subscribe: bool = False
 
     @classmethod
     def contact_us(
@@ -18,17 +17,14 @@ class ContactUs(BaseModel):
         firstname: str = Form(...),
         lastname: str = Form(...),
         email: str = Form(...),
-        message: str = Form(...),
-        subscribe: Optional[str] = Form(None)
+        message: str = Form(...)
         
     ):
-        subscribe_bool = True if subscribe=="true" else False
         return contactform(
             firstname=firstname,
             lastname=lastname,
             email=email,
-            message=message,
-            subscribe=subscribe_bool
+            message=message
             )
 
 #Pydantic's orm_mode will instruct the Pydantic model to read the data as a dictionary and as an attribute
