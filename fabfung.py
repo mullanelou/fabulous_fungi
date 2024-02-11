@@ -40,7 +40,7 @@ app.mount("/webfonts", StaticFiles(directory="templates/webfonts"), name="webfon
 templates = Jinja2Templates(directory="templates")
 
 # @app.get("/") This is a python decorator that specifies to FastAPI that the function below it is in charge of request handling.
-# '/' This is a decorator that specifies the route. This creates a GET method on the site’s route. The result is then returned by the wrapped function.
+# / This is a decorator that specifies the route. This creates a GET method on the sites route. The result is then returned by the wrapped function.
 
 
 @app.get('/Fungi_Index.html', response_class=HTMLResponse)
